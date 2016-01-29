@@ -144,7 +144,7 @@ public class WebFacture extends WebEntity implements ICollection<WebFactureItem>
 
     @PostPersist
     public void triggerAfterInsert() throws WebException {
-        if (this.type.equals(WebType.LIVRAISON)) {
+        if (this.type.equals(WebType.FACTURE)) {
             WebEntityManager wem = new WebEntityManager();
             if (!etat) {
                 try {
